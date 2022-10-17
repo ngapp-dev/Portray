@@ -83,3 +83,5 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+/app/schemas/
+/app/src/main/java/com/ngapp/portray/ui/auth/config/

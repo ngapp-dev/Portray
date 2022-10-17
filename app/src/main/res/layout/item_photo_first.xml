@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:paddingBottom="12dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/photoOfTheDayTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="@string/top_of_the_day"
+        android:textAllCaps="true"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        style="?attr/materialCardViewFilledStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:maxHeight="360dp"
+        android:transitionName="@string/transitionName"
+        app:cardPreventCornerOverlap="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/photoOfTheDayTextView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/photoImageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="?attr/selectableItemBackground"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/backgrounds/scenic" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:src="@drawable/shadowed_rectangle"
+                app:layout_constraintBottom_toBottomOf="@id/photoImageView"
+                app:layout_constraintEnd_toEndOf="@id/photoImageView"
+                app:layout_constraintStart_toStartOf="@id/photoImageView" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/avatarImageView"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/image_rounded_corners"
+                android:scaleType="centerCrop"
+                android:src="@drawable/avatar"
+                app:layout_constraintBottom_toBottomOf="@+id/photoImageView"
+                app:layout_constraintStart_toStartOf="@+id/photoImageView"
+                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+            <TextView
+                android:id="@+id/authorTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="16dp"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:textColor="@color/white"
+                android:textSize="13sp"
+                app:layout_constraintBottom_toTopOf="@+id/accountTextView"
+                app:layout_constraintEnd_toStartOf="@+id/likesTextView"
+                app:layout_constraintStart_toEndOf="@+id/avatarImageView"
+                tools:text="Alex Victor" />
+
+            <TextView
+                android:id="@+id/accountTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:textAppearance="?attr/textAppearanceSubtitle1"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="@+id/photoImageView"
+                app:layout_constraintEnd_toEndOf="@+id/authorTextView"
+                app:layout_constraintStart_toStartOf="@+id/authorTextView"
+                tools:text="1@aosdkalsdkaldksd.com" />
+
+
+            <ImageView
+                android:id="@+id/likeImageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintBottom_toBottomOf="@+id/avatarImageView"
+                app:layout_constraintEnd_toEndOf="@+id/photoImageView"
+                app:layout_constraintTop_toTopOf="@+id/avatarImageView"
+                tools:src="@drawable/ic_like_outline" />
+
+            <TextView
+                android:id="@+id/likesTextView"
+                style="@style/RobotoLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                app:layout_constraintBottom_toBottomOf="@+id/likeImageView"
+                app:layout_constraintEnd_toStartOf="@+id/likeImageView"
+                app:layout_constraintTop_toTopOf="@+id/likeImageView"
+                tools:text="234" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

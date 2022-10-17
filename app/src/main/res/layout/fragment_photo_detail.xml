@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.core.widget.NestedScrollView
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="52dp">
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.5" />
+
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/card"
+                        style="?attr/materialCardViewFilledStyle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:layout_marginBottom="16dp"
+                        app:cardPreventCornerOverlap="false"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:strokeColor="@color/stroke_color">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/photoImageView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:adjustViewBounds="true"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:src="@tools:sample/backgrounds/scenic" />
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:src="@drawable/shadowed_rectangle"
+                                app:layout_constraintBottom_toBottomOf="@id/photoImageView"
+                                app:layout_constraintEnd_toEndOf="@id/photoImageView"
+                                app:layout_constraintStart_toStartOf="@id/photoImageView" />
+
+                            <com.google.android.material.imageview.ShapeableImageView
+                                android:id="@+id/avatarImageView"
+                                android:layout_width="26dp"
+                                android:layout_height="26dp"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="@drawable/image_rounded_corners"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/avatar"
+                                app:layout_constraintBottom_toBottomOf="@+id/photoImageView"
+                                app:layout_constraintStart_toStartOf="@+id/photoImageView"
+                                app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent" />
+
+                            <TextView
+                                android:id="@+id/authorTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="8dp"
+                                android:layout_marginEnd="16dp"
+                                android:textAppearance="?attr/textAppearanceHeadline6"
+                                android:textColor="@color/white"
+                                android:textSize="13sp"
+                                app:layout_constraintBottom_toTopOf="@+id/accountTextView"
+                                app:layout_constraintEnd_toStartOf="@+id/likesTextView"
+                                app:layout_constraintStart_toEndOf="@+id/avatarImageView"
+                                tools:text="Alex Victor" />
+
+                            <TextView
+                                android:id="@+id/accountTextView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:textAppearance="?attr/textAppearanceSubtitle1"
+                                android:textColor="@color/white"
+                                android:textSize="11sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/photoImageView"
+                                app:layout_constraintEnd_toEndOf="@+id/authorTextView"
+                                app:layout_constraintStart_toStartOf="@+id/authorTextView"
+                                tools:text="1@aosdkalsdkaldksd.com" />
+
+                            <ImageView
+                                android:id="@+id/likeImageView"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginEnd="8dp"
+                                android:src="@drawable/ic_like_filled"
+                                app:layout_constraintBottom_toBottomOf="@+id/avatarImageView"
+                                app:layout_constraintEnd_toEndOf="@+id/photoImageView"
+                                app:layout_constraintTop_toTopOf="@+id/avatarImageView" />
+
+                            <TextView
+                                android:id="@+id/likesTextView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="8dp"
+                                android:text="234"
+                                android:textColor="@color/white"
+                                android:textSize="11sp"
+                                app:layout_constraintBottom_toBottomOf="@+id/likeImageView"
+                                app:layout_constraintEnd_toStartOf="@+id/likeImageView"
+                                app:layout_constraintTop_toTopOf="@+id/likeImageView" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <ImageView
+                        android:id="@+id/locationIconImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:visibility="gone"
+                        android:src="@drawable/ic_location"
+                        app:layout_constraintBottom_toBottomOf="@+id/locationTextView"
+                        app:layout_constraintStart_toStartOf="@+id/card"
+                        app:layout_constraintTop_toTopOf="@+id/locationTextView" />
+
+                    <TextView
+                        android:id="@+id/locationTextView"
+                        style="@style/RobotoLight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/locationIconImageView"
+                        app:layout_constraintTop_toBottomOf="@+id/card"
+                        tools:text="San Francisco, CA" />
+
+
+                    <TextView
+                        android:id="@+id/hashtagsTextView"
+                        style="@style/RobotoLight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/card"
+                        app:layout_constraintTop_toBottomOf="@+id/locationTextView"
+                        tools:text="#woman #model #nature #rights #womanrights" />
+
+                    <TextView
+                        android:id="@+id/madeWithTextView"
+                        style="@style/RobotoLight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline"
+                        app:layout_constraintStart_toStartOf="@+id/card"
+                        app:layout_constraintTop_toBottomOf="@+id/hashtagsTextView"
+                        tools:text="@string/made_with" />
+
+                    <TextView
+                        android:id="@+id/modelTextView"
+                        style="@style/RobotoLight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline"
+                        app:layout_constraintStart_toStartOf="@+id/madeWithTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/madeWithTextView"
+                        tools:text="@string/camera_model" />
+
+                    <TextView
+                        android:id="@+id/exposureTextView"
+                        style="@style/RobotoLight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline"
+                        app:layout_constraintStart_toStartOf="@+id/modelTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/modelTextView"
+                        tools:text="@string/exposure" />
+
+                    <TextView
+                        android:id="@+id/apertureTextView"
+                        style="@style/RobotoLight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline"
+                        app:layout_constraintStart_toStartOf="@+id/exposureTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/exposureTextView"
+                        tools:text="@string/aperture" />
+
+                    <TextView
+                        android:id="@+id/focalLengthTextView"
+                        style="@style/RobotoLight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline"
+                        app:layout_constraintStart_toStartOf="@+id/apertureTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/apertureTextView"
+                        tools:text="@string/focal_length" />
+
+                    <TextView
+                        android:id="@+id/IsoTextView"
+                        style="@style/RobotoLight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="32dp"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@+id/downloadTextView"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline"
+                        app:layout_constraintStart_toStartOf="@+id/apertureTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/focalLengthTextView"
+                        tools:text="@string/iso" />
+
+                    <TextView
+                        android:id="@+id/aboutUsernameTextView"
+                        style="@style/RobotoLight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="16dp"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/guideline"
+                        app:layout_constraintTop_toTopOf="@+id/madeWithTextView"
+                        tools:text="@string/about_user" />
+
+                    <TextView
+                        android:id="@+id/aboutUserTextView"
+                        style="@style/RobotoLight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="@+id/aboutUsernameTextView"
+                        app:layout_constraintStart_toEndOf="@+id/guideline"
+                        app:layout_constraintTop_toBottomOf="@+id/aboutUsernameTextView"
+                        tools:text="Dreamer, creator. Strong man, stronger passion." />
+
+                    <TextView
+                        android:id="@+id/onUnshplashTextView"
+                        style="@style/RobotoLight"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="4dp"
+                        android:text="@string/on_unsplash"
+                        android:textAlignment="textEnd"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="@+id/aboutUsernameTextView"
+                        app:layout_constraintStart_toEndOf="@+id/guideline"
+                        app:layout_constraintTop_toBottomOf="@+id/aboutUserTextView" />
+
+                    <androidx.constraintlayout.widget.Barrier
+                        android:id="@+id/barrier"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:barrierDirection="bottom"
+                        app:constraint_referenced_ids="IsoTextView,aboutUserTextView" />
+
+                    <ImageView
+                        android:id="@+id/downloadImageView"
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:layout_marginEnd="16dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/downloadsNumberTextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/downloadsNumberTextView"
+                        app:srcCompat="@drawable/ic_download"
+                        app:tint="?attr/colorOnSecondary" />
+
+                    <TextView
+                        android:id="@+id/downloadsNumberTextView"
+                        style="@style/RobotoLight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        app:layout_constraintBottom_toBottomOf="@+id/downloadTextView"
+                        app:layout_constraintEnd_toStartOf="@+id/downloadImageView"
+                        app:layout_constraintTop_toTopOf="@+id/downloadTextView"
+                        tools:text="@string/number_downloads" />
+
+                    <TextView
+                        android:id="@+id/downloadTextView"
+                        style="@style/RobotoLight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="32dp"
+                        android:text="@string/item_profile_feed_picture_download"
+                        android:background="?attr/selectableItemBackground"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/downloadsNumberTextView"
+                        app:layout_constraintTop_toTopOf="@+id/barrier"
+                        app:layout_constraintVertical_bias="1.0" />
+
+
+                    <!--            <ProgressBar-->
+                    <!--                android:id="@+id/progressBar"-->
+                    <!--                android:layout_width="wrap_content"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                app:layout_constraintBottom_toBottomOf="@+id/barrier"-->
+                    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                app:layout_constraintStart_toStartOf="parent"-->
+                    <!--                app:layout_constraintTop_toBottomOf="@+id/card" />-->
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_onboarding">
+
+    <fragment
+        android:id="@+id/nav_onboarding"
+        android:name="com.ngapp.portray.ui.onboarding.OnboardingFragment"
+        android:label="@string/nav_onboarding"
+        tools:layout="@layout/fragment_onboarding">
+        <action
+            android:id="@+id/action_nav_onboarding_to_nav_auth"
+            app:destination="@id/nav_auth"
+            app:exitAnim="@android:anim/fade_out"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_onboarding"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_auth"
+        android:name="com.ngapp.portray.ui.auth.ui.AuthFragment"
+        android:label="@string/nav_auth"
+        tools:layout="@layout/fragment_auth">
+        <action
+            android:id="@+id/action_nav_auth_to_nav_home"
+            app:destination="@id/nav_home"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_auth"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.ngapp.portray.ui.home.HomeFragment"
+        android:label="@string/nav_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeNewFragment_to_nav_photo_detail"
+            app:destination="@id/nav_photo_detail"
+            app:popUpTo="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_collections"
+        android:name="com.ngapp.portray.ui.collections.CollectionsFragment"
+        android:label="@string/nav_collections"
+        tools:layout="@layout/fragment_collections">
+        <action
+            android:id="@+id/action_nav_favourites_to_nav_collection_detail"
+            app:destination="@id/nav_collection_detail" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.ngapp.portray.ui.profile.ProfileFragment"
+        android:label="@string/nav_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_nav_profile_to_nav_photo_detail"
+            app:destination="@id/nav_photo_detail"
+            app:popUpTo="@id/nav_profile" />
+        <action
+            android:id="@+id/action_nav_profile_to_logoutBottomDialogFragment"
+            app:destination="@id/nav_logout" />
+        <action
+            android:id="@+id/action_nav_profile_to_nav_collection_detail"
+            app:destination="@id/nav_collection_detail" />
+        <action
+            android:id="@+id/action_nav_profile_to_nav_profile_edit"
+            app:destination="@id/nav_profile_edit" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_photo_detail"
+        android:name="com.ngapp.portray.ui.home.photo_detail.PhotoDetailFragment"
+        android:label="@string/nav_photo_detail"
+        tools:layout="@layout/fragment_photo_detail">
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <argument
+            android:name="url"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <dialog
+        android:id="@+id/nav_logout"
+        android:name="com.ngapp.portray.ui.profile.LogoutBottomDialogFragment"
+        android:label="@string/nav_logout"
+        tools:layout="@layout/bottom_dialog_fragment_logout" />
+    <fragment
+        android:id="@+id/nav_collection_detail"
+        android:name="com.ngapp.portray.ui.collections.collection_detail.CollectionDetailFragment"
+        android:label="@string/nav_collection_detail"
+        tools:layout="@layout/fragment_home">
+        <argument
+            android:name="id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_nav_collection_detail_to_nav_photo_detail2"
+            app:destination="@id/nav_photo_detail"
+            app:popUpTo="@id/nav_collections" />
+        <argument
+            android:name="title"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_profile_edit"
+        android:name="com.ngapp.portray.ui.profile.ProfileEditFragment"
+        android:label="@string/edit_profile"
+        tools:layout="@layout/fragment_profile_edit" >
+        <action
+            android:id="@+id/action_nav_profile_edit_to_nav_profile"
+            app:destination="@id/nav_profile" />
+    </fragment>
+</navigation>

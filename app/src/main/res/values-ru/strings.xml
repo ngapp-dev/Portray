@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="nav_collections">Коллекции</string>
+    <string name="nav_profile">Профиль</string>
+    <string name="nav_home">Главная</string>
+    <string name="nav_auth">Аутентицикация</string>
+    <string name="nav_photo_detail">Фото подробно</string>
+    <string name="nav_collection_detail">Коллекция</string>
+    <string name="nav_logout">Выйти</string>
+    <string name="title_activity_settings">Настройки</string>
+    <string name="preference_header">Базовые настройки</string>
+    <string name="theme_title">Тема</string>
+    <string name="language_mode_title">Язык</string>
+    <string name="theme_mode_title">Тема</string>
+    <string name="onboarding_next">Далее</string>
+    <string name="onboarding_get_started">Начать</string>
+    <string name="auth_login">Войти</string>
+    <string name="auth_canceled">Аутентификация не удалась</string>
+    <string name="auth_successful">Вход выполнен успешно</string>
+    <string name="auth_error">Ошибка аутентификации</string>
+    <string name="item_profile_feed_picture_download"><u>Скачать</u></string>
+    <string name="search">Поиск</string>
+    <string name="photo_of_the_day">Топ сегодня</string>
+    <string name="logout">Выйти</string>
+    <string name="settings">Настройки</string>
+    <string name="totalPhotos">%1$d Фотографий</string>
+    <string name="share">Поделиться</string>
+    <string name="made_with">Сделано с помощью: %s</string>
+    <string name="camera_model">Модель: %s</string>
+    <string name="exposure">Экспозиция: %s</string>
+    <string name="aperture">Диафрагма: %s</string>
+    <string name="focal_length">Фокусное расстояние: %s</string>
+    <string name="about_user">О пользователе @%s :</string>
+    <string name="user_bio">Мечтатель, творец. Сильный человек, сильная страсть.</string>
+    <string name="number_photos">%s Фотографий</string>
+    <string name="photo_download_error">Ошибка загрузки фото</string>
+    <string name="photo_download_success">Загрузка прошла успешно</string>
+    <string name="load_error">Ошибка загрузки</string>
+    <string name="on_unsplash">на <u>Unsplash</u></string>
+    <string name="retry">Повторить</string>
+    <string name="no_results">Нет результатов</string>
+    <string name="dismiss">Убрать</string>
+    <string name="data_could_not_be_loaded">Не удалось загрузить данные</string>
+    <string name="top_of_the_day">Топ дня</string>
+    <string name="search_photos_hint">Искать фотографии...</string>
+    <string name="skip">Пропустить</string>
+    <string name="next">Далее</string>
+    <string name="rate_limit_exceeded">Превышен предел загрузок</string>
+    <string name="resource_not_found">Ресурс не найден</string>
+    <string name="sign_in_with_unsplash">Войти через Unsplash</string>
+    <string name="are_you_sure_you_want_to_logout_all_local_data_will_be_deleted">Вы действительно хотите выйти? Все локальные данные будут удалены.</string>
+    <string name="no">Нет</string>
+    <string name="yes">Да</string>
+    <string name="select_application">Выберите приложение</string>
+    <string name="portray_share">Фотография Unsplash через Portray</string>
+    <string name="open">Открыть</string>
+    <string name="edit_profile">Редактировать профиль</string>
+    <string name="change_profile_photo">Изменить фотографию профиля</string>
+    <string name="submit">Подтвердить</string>
+    <string name="about">О приложении</string>
+
+    <string-array name="theme_entries">
+        <item>По умолчанию</item>
+        <item>Светлая</item>
+        <item>Темная</item>
+    </string-array>
+    <string name="nav_photos">Фотографий</string>
+    <string name="nav_likes">Понравилось</string>
+    <string name="nav_user_collections">Коллекций</string>
+    <string name="list_empty">Список пуст</string>
+    <string name="list_not_empty">Список не пуст</string>
+    <string name="nav_photos_one">Фотография</string>
+    <string name="nav_photos_two_four">Фотографии</string>
+    <string name="nav_user_collections_one">Коллекция</string>
+    <string name="nav_user_collections_two_four">Коллекции</string>
+</resources>

@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name" translatable="false">Portray</string>
+
+    <!-- Fragments -->
+    <string name="nav_onboarding" translatable="false">Onboarding</string>
+    <string name="nav_onboarding_page" translatable="false">Onboarding Page Fragment</string>
+    <string name="nav_collections">Collections</string>
+    <string name="nav_profile">Profile</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_auth">Auth</string>
+    <string name="nav_photo_detail">Photo</string>
+    <string name="nav_collection_detail">Collection</string>
+    <string name="nav_logout">Logout</string>
+
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Activity -->
+    <string name="preference_header">Basic Settings</string>
+    <!-- Preference Titles -->
+    <string name="theme_title">Theme</string>
+    <string name="language_mode_title">Language</string>
+    <string name="theme_mode_title">Theme</string>
+    <!-- List Preferences -->
+    <string name="theme_mode" translatable="false">Theme</string>
+    <string name="language_mode" translatable="false">Language</string>
+
+    <string name="theme_default_value" translatable="false">system_default</string>
+    <string name="language_default_value" translatable="false">system_default</string>
+
+    <string-array name="theme_entries">
+        <item>System default</item>
+        <item>Light</item>
+        <item>Dark</item>
+    </string-array>
+
+    <string-array name="theme_values">
+        <item>system_default</item>
+        <item>light_theme</item>
+        <item>dark_theme</item>
+    </string-array>
+
+    <string-array name="language_entries">
+        <item>System default</item>
+        <item>English</item>
+        <item>Русский</item>
+    </string-array>
+
+    <string-array name="language_values">
+        <item>system_default</item>
+        <item>english_language</item>
+        <item>russian_language</item>
+    </string-array>
+
+    <!-- Onboarding Fragment -->
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_get_started">Get started</string>
+
+    <!-- Auth Fragment -->
+    <string name="auth_login">Sign In</string>
+    <string name="auth_canceled">Authentication failed</string>
+    <string name="auth_successful">Login successful</string>
+    <string name="auth_error">Authentication error</string>
+    <string name="item_profile_feed_picture_download"><u>Download</u></string>
+
+    <!-- Home Fragment -->
+    <string name="search">Search</string>
+    <string name="photo_of_the_day">Top today</string>
+
+    <!-- Profile Fragment -->
+    <string name="logout">Logout</string>
+    <string name="settings">Settings</string>
+
+    <!-- Detail Photo -->
+    <string name="totalPhotos">%1$d Photos</string>
+    <string name="share">Share</string>
+    <string name="transitionName" translatable="false">%s</string>
+    <string name="made_with">Made with: %s</string>
+    <string name="camera_model">Model: %s</string>
+    <string name="exposure">Exposure: %s</string>
+    <string name="aperture">Aperture: %s</string>
+    <string name="focal_length">Focal Length: %s</string>
+    <string name="iso" translatable="false">ISO: %s</string>
+    <string name="about_user">About @%s :</string>
+    <string name="username" translatable="false">/&#64;%s</string>
+    <string name="user_bio">Dreamer, creator. Strong man, stronger passion.</string>
+    <string name="number_downloads" translatable="false">(%s)</string>
+    <string name="number_photos">%s Photos</string>
+    <string name="photo_download_error">Photo download error</string>
+    <string name="photo_download_success">Download successful</string>
+    <string name="load_error">Loading error</string>
+    <string name="on_unsplash">on <u>Unsplash</u></string>
+
+    <!-- Home Fragment -->
+    <string name="retry">Retry</string>
+    <string name="no_results">No results</string>
+    <string name="dismiss">DISMISS</string>
+    <string name="open">OPEN</string>
+    <string name="data_could_not_be_loaded">Data could not be loaded</string>
+    <string name="top_of_the_day">Top of the day</string>
+    <string name="search_photos_hint">Search Photos...</string>
+    <string name="skip">Skip</string>
+    <string name="next">Next</string>
+    <string name="rate_limit_exceeded">Rate Limit Exceeded</string>
+    <string name="resource_not_found">Resource not found</string>
+    <string name="sign_in_with_unsplash">Sign in with Unsplash</string>
+    <string name="are_you_sure_you_want_to_logout_all_local_data_will_be_deleted">Are you sure you want to logout? All local data will be deleted.</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="select_application">Select application</string>
+    <string name="portray_share">Unsplash photo via Portray</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="change_profile_photo">Change profile photo</string>
+    <string name="submit">Submit</string>
+    <string name="about">About</string>
+    <string name="nav_photos">Photos</string>
+    <string name="nav_photos_one">Photo</string>
+    <string name="nav_photos_two_four">Photos</string>
+    <string name="nav_likes">Likes</string>
+    <string name="nav_user_collections">Collections</string>
+    <string name="nav_user_collections_one">Collection</string>
+    <string name="nav_user_collections_two_four">Collections</string>
+    <string name="list_not_empty">List is NOT empty</string>
+    <string name="list_empty">List is empty</string>
+
+</resources>
